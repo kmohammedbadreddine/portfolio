@@ -4,6 +4,15 @@
   const $ = (s, c = document) => c.querySelector(s);
   const $$ = (s, c = document) => [...c.querySelectorAll(s)];
   const esc = s => String(s).replace(/[&<>"']/g, m => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[m]));
+  /* Tracking GA4 via Google Tag Manager */
+  window.dataLayer = window.dataLayer || [];
+
+  const trackEvent = (eventName, parameters = {}) => {
+    window.dataLayer.push({
+      event: eventName,
+      ...parameters
+    });
+  };
 
   /* Année dynamique */
   $('#year').textContent = new Date().getFullYear();
