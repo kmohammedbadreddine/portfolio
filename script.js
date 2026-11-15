@@ -48,6 +48,8 @@
   const dlg = $('#modal');
   const open = i => {
     const p = P[i];
+    // Mémorisation du projet actuellement ouvert
+    window.currentProject = p;
     $('#m-body').innerHTML = `
       <button class="x" aria-label="Fermer la fenêtre">×</button>
       <div class="thumb">${visual(p)}${badge(p)}</div>
@@ -64,8 +66,33 @@
     document.body.style.overflow = 'hidden';
     dlg.showModal();
   };
-  $('#projects-grid').addEventListener('click', e => { const b = e.target.closest('.pcard'); if (b) open(+b.dataset.i); });
-  dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close(); }); /* clic à l'extérieur */
+  
+/* Tracking de l'ouverture des projets */
+$('#projects-grid').addEventListener('click', e => {
+  const b = e.target.closest('.pcard');
+  if (!b) return;
+  const index = Number(b.dataset.i);
+  const project = P[index];
+  if (project) {
+    trackEvent('project_open', {
+      project_name: project.title,
+      project_category: project.category,
+      project_index: index
+    });
+  }
+  open(index);
+});
+  dlg.addEventListener('click', e => {
+  const projectLink = e.target.closest('.m-in a.btn');
+  if (projectLink && window.currentProject) {
+    trackEvent('project_link_click', {
+      project_name: window.currentProject.title,
+      project_category: window.currentProject.category,
+      link_url: projectLink.href
+    });
+  }
+  if (e.target === dlg) dlg.close();
+  });
   dlg.addEventListener('close', () => { document.body.style.overflow = ''; });
 
   /* Apparition au défilement */
