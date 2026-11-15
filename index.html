@@ -1,12 +1,23 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-MCPHPB48"></script>
+  <!-- Google Tag Manager -->
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    (function(w,d,s,l,i){
+    w[l]=w[l]||[];
+    w[l].push({
+      'gtm.start': new Date().getTime(),
+      event:'gtm.js'
+    });
+    var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),
+        dl=l!='dataLayer'?'&l='+l:'';
+    j.async=true;
+    j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+    f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MCPHPB48');
   </script>
+  <!-- End Google Tag Manager -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Portfolio Mohammed KADRI – Data Analyst | Data Marketing</title>
@@ -20,6 +31,16 @@
   <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe
+      src="https://www.googletagmanager.com/ns.html?id=GTM-MCPHPB48"
+      height="0"
+      width="0"
+      style="display:none;visibility:hidden">
+    </iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
 <a class="skip" href="#main">Aller au contenu</a>
 
 <header>
@@ -49,7 +70,7 @@
       <p>Je veille à la fiabilité des données, à la compréhension des besoins métiers et à des insights que les équipes peuvent utiliser immédiatement.</p>
       <div class="actions">
         <a class="btn primary" href="#experiences">Découvrir mon parcours</a>
-        <a class="btn ghost" href="CV_KADRI.pdf" target="_blank" download>Télécharger mon CV</a>
+        <a class="btn ghost" href="CV_KADRI.pdf" target="_blank" download data-track="cv_download" data-file-name="CV_KADRI.pdf">Télécharger mon CV</a>
       </div>
     </div>
     <div class="hero-visual">
@@ -170,8 +191,8 @@
       <p>Data Analyst | Data Marketing</p>
     </div>
     <ul>
-      <li><a href="mailto:kadri.badreddine92@gmail.com">kadri.badreddine92@gmail.com</a></li>
-      <li><a href="https://www.linkedin.com/in/mohammed-badr-eddine-kadri/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bb%2Bsn9dQuQ%2FqSYNQhvxbeeQ%3D%3D" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="mailto:kadri.badreddine92@gmail.com" data-track="contact_click" data-contact-method="email">kadri.badreddine92@gmail.com</a></li>
+      <li><a href="https://www.linkedin.com/in/mohammed-badr-eddine-kadri/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bb%2Bsn9dQuQ%2FqSYNQhvxbeeQ%3D%3D" target="_blank" rel="noopener" data-track="linkedin_click">LinkedIn</a></li>
       <!-- <li><a href="https://github.com/votre-compte" target="_blank" rel="noopener">GitHub</a></li>-->
     </ul>
     <a class="btn ghost" href="#profil">Retour en haut</a>
