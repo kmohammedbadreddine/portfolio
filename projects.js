@@ -43,7 +43,7 @@ window.PROJECTS = [
     hook: "Analyse du positionnement digital d’AXA sur les moteurs de recherche, permettant d’identifier ses points forts ainsi que ses axes d’amélioration.",
     image: "axa.jpg", art: "bars",
     summary: "Dans le cadre d'un exercice, j'ai étudié le positionnement d’AXA sur les différents moteurs de recherche afin d’identifier ses points forts ainsi que ses axes d’amélioration en matière de référencement naturel. Cette expérience m’a permis de développer mes connaissances en stratégie SEO, d’approfondir ma compréhension des mécanismes de référencement et de découvrir les différents leviers qu’une entreprise peut mettre en place pour améliorer sa visibilité en ligne.",
-    goals: ["Évaluer la visibilité digitale d'AXA en analysant son positionnement et ses performances sur les moteurs de recherche.", "Identifier les opportunités d'amélioration SEO à travers l'étude des aspects techniques, éditoriaux et concurrentiels.", "1. Formuler des recommandations stratégiques afin d'optimiser le référencement naturel et renforcer la présence en ligne de l'entreprise."],
+    goals: ["Évaluer la visibilité digitale d'AXA en analysant son positionnement et ses performances sur les moteurs de recherche.", "Identifier les opportunités d'amélioration SEO à travers l'étude des aspects techniques, éditoriaux et concurrentiels.", "Formuler des recommandations stratégiques afin d'optimiser le référencement naturel et renforcer la présence en ligne de l'entreprise."],
     tools: ["Canva"],
     link: "https://canva.link/1ts3q9nmvnf46qi", linkLabel: "Audit AXA"
   },
